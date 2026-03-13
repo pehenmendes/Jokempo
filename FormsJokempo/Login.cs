@@ -4,7 +4,7 @@ namespace FormsJokempo
 {
     public partial class Login : Form
     {
-        private List<Jogador> jogadorList = new();
+        private Jogo jogo = new Jogo();
 
         public Login()
         {
@@ -13,15 +13,17 @@ namespace FormsJokempo
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Jogador jogador = new Jogador();
+            Menu telaMenu = new Menu();
             if (txtNomeJogador.Text.Length > 0)
             {
-                jogador.Nome = txtNomeJogador.Text;
-                jogadorList.Add(jogador);
-                Menu form = new Menu();
-                form.Show();
+                jogo.AdicionarJogador(txtNomeJogador.Text);
+
+                telaMenu.JogadorAtual = txtNomeJogador.Text;
+                telaMenu.Show();
+                this.Hide();
             }
-            else {
+            else
+            {
                 txtAviso.Text = "Campo vazio\nDigite um nome válido";
                 txtAviso.Visible = true;
             }

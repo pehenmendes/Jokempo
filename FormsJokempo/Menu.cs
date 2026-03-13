@@ -12,9 +12,19 @@ namespace FormsJokempo
 {
     public partial class Menu : Form
     {
+        public String JogadorAtual { get; set; }
+
         public Menu()
         {
             InitializeComponent();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            if (!this.JogadorAtual.Equals(""))
+            {
+                txtJogadorAtual.Text = this.JogadorAtual;
+            }
         }
     }
 }
