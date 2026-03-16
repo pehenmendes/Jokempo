@@ -4,7 +4,6 @@ namespace FormsJokempo
 {
     public partial class Login : Form
     {
-        private Jogo jogo = new Jogo();
 
         public Login()
         {
@@ -13,13 +12,14 @@ namespace FormsJokempo
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Menu telaMenu = new Menu();
+            
             if (txtNomeJogador.Text.Length > 0)
             {
-                jogo.AdicionarJogador(txtNomeJogador.Text);
+                GameManager.Jogo.CriarJogador(txtNomeJogador.Text);
 
-                telaMenu.JogadorAtual = txtNomeJogador.Text;
+                Menu telaMenu = new Menu();
                 telaMenu.Show();
+
                 this.Hide();
             }
             else

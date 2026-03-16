@@ -38,13 +38,13 @@
             // 
             // label1
             // 
-            label1.AutoSize = true;
             label1.Font = new Font("Verdana", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(65, 9);
+            label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(204, 42);
+            label1.Size = new Size(317, 42);
             label1.TabIndex = 0;
             label1.Text = "JOKENPÓ";
+            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // txtNomeJogador
             // 
@@ -65,7 +65,7 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(133, 144);
+            btnSalvar.Location = new Point(134, 144);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(75, 23);
             btnSalvar.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(133, 51);
+            label3.Location = new Point(134, 51);
             label3.Name = "label3";
             label3.Size = new Size(76, 25);
             label3.TabIndex = 4;
@@ -107,6 +107,7 @@
             Controls.Add(label1);
             Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "Login";
+            StartPosition = FormStartPosition.CenterScreen;
             ResumeLayout(false);
             PerformLayout();
         }

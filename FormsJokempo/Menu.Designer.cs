@@ -36,6 +36,7 @@
             label3 = new Label();
             txtJogadorAtual = new Label();
             label4 = new Label();
+            btnSair = new Button();
             SuspendLayout();
             // 
             // label1
@@ -66,6 +67,7 @@
             btnJogar.TabIndex = 2;
             btnJogar.Text = "Jogar";
             btnJogar.UseVisualStyleBackColor = true;
+            btnJogar.Click += btnJogar_Click;
             // 
             // btnEstatistica
             // 
@@ -75,6 +77,7 @@
             btnEstatistica.TabIndex = 3;
             btnEstatistica.Text = "Estatísticas";
             btnEstatistica.UseVisualStyleBackColor = true;
+            btnEstatistica.Click += btnEstatistica_Click;
             // 
             // btnTrocarJogador
             // 
@@ -84,6 +87,7 @@
             btnTrocarJogador.TabIndex = 4;
             btnTrocarJogador.Text = "Trocar Jogador";
             btnTrocarJogador.UseVisualStyleBackColor = true;
+            btnTrocarJogador.Click += btnTrocarJogador_Click;
             // 
             // label3
             // 
@@ -112,11 +116,22 @@
             label4.Text = "Escolha uma das opções abaixo:";
             label4.TextAlign = ContentAlignment.TopCenter;
             // 
+            // btnSair
+            // 
+            btnSair.Location = new Point(356, 385);
+            btnSair.Name = "btnSair";
+            btnSair.Size = new Size(75, 23);
+            btnSair.TabIndex = 8;
+            btnSair.Text = "Sair";
+            btnSair.UseVisualStyleBackColor = true;
+            btnSair.Click += btnSair_Click;
+            // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(8F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(443, 420);
+            Controls.Add(btnSair);
             Controls.Add(label4);
             Controls.Add(txtJogadorAtual);
             Controls.Add(label3);
@@ -127,6 +142,7 @@
             Controls.Add(label1);
             Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "Menu";
+            StartPosition = FormStartPosition.CenterScreen;
             Load += Menu_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -142,5 +158,6 @@
         private Label label3;
         private Label txtJogadorAtual;
         private Label label4;
+        private Button btnSair;
     }
 }

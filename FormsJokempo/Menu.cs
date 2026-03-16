@@ -1,4 +1,6 @@
-﻿using System;
+﻿using JokempoLibrary;
+using JokempoLibrary.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +14,8 @@ namespace FormsJokempo
 {
     public partial class Menu : Form
     {
-        public String JogadorAtual { get; set; }
+        
+        private Login telaLogin = new Login();
 
         public Menu()
         {
@@ -21,10 +24,33 @@ namespace FormsJokempo
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            if (!this.JogadorAtual.Equals(""))
-            {
-                txtJogadorAtual.Text = this.JogadorAtual;
-            }
+            txtJogadorAtual.Text = GameManager.Jogo.JogadorAtual.Nome;
+        }
+
+        private void btnJogar_Click(object sender, EventArgs e)
+        {
+            Jogar telaJogar = new Jogar();
+            telaJogar.Show();
+            this.Hide();
+        }
+
+        private void btnEstatistica_Click(object sender, EventArgs e)
+        {
+            Estatisticas telaEstatisticas = new Estatisticas();
+            telaEstatisticas.Show();
+            this.Hide();
+        }
+
+        private void btnTrocarJogador_Click(object sender, EventArgs e)
+        {
+            telaLogin.Show();
+            this.Hide();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            telaLogin.Close();
+            this.Close();
         }
     }
 }
