@@ -59,7 +59,7 @@ O código foi organizado em **métodos para facilitar a leitura, manutenção e 
 
 O projeto utiliza:
 
-* **Dictionary** para armazenar jogadores e estatísticas
+* **List** para armazenar jogadores e estatísticas
 * **Classe Estatistica** para guardar:
 
   * Vitórias
@@ -108,31 +108,6 @@ dotnet run
 
 ---
 
-## 💻 Exemplo de Execução
-
-```
-=== JOGO JOKENPO ===
-
-Digite o nome do jogador: Pedro
-
-Jogador atual: Pedro
-1 - Jogar
-2 - Trocar jogador
-3 - Ver estatísticas
-0 - Sair
-
-Escolha uma opção: 1
-
-Escolha:
-1 - Pedra
-2 - Papel
-3 - Tesoura
-
-Máquina escolheu: Papel
-Resultado: Derrota
-```
-
----
 
 ## 🎯 Objetivo Educacional
 
